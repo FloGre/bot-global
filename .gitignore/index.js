@@ -27,9 +27,7 @@ bot.on('message', message =>{
         message.reply("Bien le bonjour. \n Auriez vous l'obligence de doigter pour moi s'il vous plait ? :angel:");
         console.log("Commande Salut effectué");
     }
-});
 
-bot.on('message', message =>{
     var msgauthor = message.author.id;
     if(message.author.bot)return;
     if(!db.get("xp").find({user: msgauthor}).value()){
