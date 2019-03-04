@@ -1,5 +1,13 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync')
+const client = new Discord.Client();
+
+const adapter = new FileSync('database.json');
+const db = low(adapter);
+
+db.defaults({ histoires: [], xp: []}).write()
 
 var prefix = ("/")
 
@@ -8,7 +16,7 @@ bot.on('ready', function(){
     console.log("Connected");
 });
 
-bot.login(process.env.TOKEN);
+bot.login("NTE2NTc0MzQwNDkwMzMwMTEy.D178RQ.0H9LDRzyfpAqNHCP8Br6RRazDQ8");
 
 bot.on('message', message =>{
     if (message.content === prefix + "help"){
@@ -16,10 +24,10 @@ bot.on('message', message =>{
     }
 
     if(message.content === "Salut"){
-        message.reply("Bien le bonjour. \n Auriez vous l'obligence de vous doigter pour moi s'il vous plait ? :angel:");
+        message.reply("Bien le bonjour. \n Auriez vous l'obligence de doigter pour moi s'il vous plait ? :angel:");
         console.log("Commande Salut effectué");
     }
-    
+
     var msgauthor = message.author.id;
     if(message.author.bot)return;
     if(!db.get("xp").find({user: msgauthor}).value()){
@@ -44,4 +52,4 @@ bot.on('message', message =>{
             .setFooter("GG")
         message.channel.send({embed: xp_embed});
     }
-}});
+});
