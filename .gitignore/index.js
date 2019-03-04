@@ -24,8 +24,12 @@ bot.on('message', message =>{
     }
 
     if(message.content === "Salut"){
-        message.reply("Bien le bonjour. \n Auriez vous l'obligence de doigter pour moi s'il vous plait ? :angel:");
+        message.reply("Bien le bonjour. \n Auriez vous l'obligence de vous doigter pour moi s'il vous plait ? :angel:");
         console.log("Commande Salut effectué");
+    }
+    if(message.content === "Bonne nuit"){
+        message.reply("Déjà ?! je t'ai pas vu entrain de te doigter encore !!!");
+        console.log("Commande Bonne nuit effectué");
     }
 
     var msgauthor = message.author.id;
