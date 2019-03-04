@@ -19,16 +19,7 @@ bot.on('message', message =>{
         message.reply("Bien le bonjour. \n Auriez vous l'obligence de vous doigter pour moi s'il vous plait ? :angel:");
         console.log("Commande Salut effectué");
     }
-bot.on('message', message =>{
-    if (message.content === prefix + "help"){
-        message.channel.sendMessage("Liste des commandes: \n /help");
-    }
-
-    if(message.content === "Salut"){
-        message.reply("Bien le bonjour. \n Auriez vous l'obligence de me montrer votre culotte ? :angel:");
-        console.log("Commande Salut effectué");
-    }
-
+    
     var msgauthor = message.author.id;
     if(message.author.bot)return;
     if(!db.get("xp").find({user: msgauthor}).value()){
