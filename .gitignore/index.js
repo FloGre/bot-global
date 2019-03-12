@@ -20,7 +20,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message =>{
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Liste des commandes: \n /help");
+        message.channel.sendMessage("Liste des commandes: \n /help: afficher les commandes \n /xp: affiche le nombre d'XP \n Salut ou Bonne nuit: le BOT réponds");
     }
 
     if(message.content === "Salut"){
