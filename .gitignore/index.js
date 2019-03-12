@@ -24,7 +24,7 @@ bot.on('message', message =>{
     }
 
     if(message.content === "Salut"){
-        message.reply("Bien le bonjour. \n Auriez vous l'obligence de vous doigter pour moi s'il vous plait ? :angel:");
+        message.reply("Bien le bonjour. \n Auriez vous l'obligence de vous la fermer ! MERCI :angel:");
         console.log("Commande Salut effectué");
     }
     if(message.content === "Bonne nuit"){
