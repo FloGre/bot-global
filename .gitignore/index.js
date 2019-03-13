@@ -12,7 +12,7 @@ db.defaults({ histoires: [], xp: []}).write()
 var prefix = ("/")
 
 bot.on('ready', function(){
-    bot.user.setGame("CHRISTIAN EST UN PD !");
+    bot.user.setGame("VIVE LA BDD");
     console.log("Connected");
 });
 
