@@ -28,7 +28,7 @@ bot.on('message', message =>{
         console.log("Commande Salut effectué");
     }
     if(message.content === "Bonne nuit"){
-        message.reply("Déjà ?! je t'ai pas vu entrain de te doigter encore !!!");
+        message.reply("Déjà ?! Petite nature !!!");
         console.log("Commande Bonne nuit effectué");
     }
 
