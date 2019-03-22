@@ -50,7 +50,7 @@ bot.on('message', message =>{
         var xpfinal = Object.values(xp);
         var xp_embed = new Discord.RichEmbed()
             .setTitle(`Stat des XP de ${message.author.username}`)
-            .setColor('#850606')
+            .setColor('#850606', '#FFD700')
             .setDescription("Affichage des XP")
             .addField("XP:", `${xpfinal[1]} xp`)
             .setFooter("TOUJOURS PLUS")
