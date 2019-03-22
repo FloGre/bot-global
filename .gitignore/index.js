@@ -53,7 +53,7 @@ bot.on('message', message =>{
             .setColor('#FF0000')
             .setDescription("Affichage des XP")
             .addField("XP:", `${xpfinal[1]} xp`)
-            .setFooter("GG")
+            .setFooter("TOUJOURS PLUS")
         message.channel.send({embed: xp_embed});
     }
 });
