@@ -30,4 +30,30 @@ bot.on('message', message =>{
     }
 });
 
+bot.on('message', message =>{
+    var msgauthor = message.author.id;
+    if(message.author.bot)return;
+    if(!db.get("xp").find({user: msgauthor}).value()){
+        db.get("xp").push({user: msgauthor, xp: 1}).write();
+    }else{
+        var userxpdb = db.get("xp").filter({user: msguthor}).find('xp').value();
+        console.log(userxpdb);
+        var userxp = Object.values(userxpdb)
+        console.log(userxpdb);
+        console.log(`Nombre d'xp: ${userxp[1]}`)
 
+        db.get("xp").find({user: msgauthor}).assign({user: msgauthor, xp: userxp[1] += 1}).write)();
+
+        if(message.content === prefix + "xp"){
+            var xp = db.get("xp").filter({user: msgauthor}).find('xp').value()
+            var xpfinal = Object.values(xp);
+            var xp_embed = new Discord.RichEmbed()
+                .setTitle(`Statistiques des XP de ${message.author.username}`)
+                .setColor(`#FF0000`)
+                .setDescription("Affichage des XP")
+                .addField("XP:",`${xpfinal[1]} xp`)
+                .setFooter("Incroyable du cul")
+            message.channel.send({embed: xp_embed})
+        }
+    }
+});
