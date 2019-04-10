@@ -20,4 +20,22 @@ bot.on(`message`, message => {
         //message.channel.send("Voici les coommandes du BOT");
      console.log("Commande help demandée");
     }
+
+    if (message.content === "Salut"){
+        random();
+        if(rendnum == 1){
+            message.reply("Salut à toi jeune pandawan");
+            console.log(randnum);
+        }
+        if(randnum == 2){
+            message.reply("Coucou toi ! tu veux voir ma bite ?")
+            console.log(randnum);
+        }
+    }
 });
+
+function random(min, max){
+    min = Math.ceil(0);
+    max = Math.floor(3);
+    randnum = Math.floor(Math.random() * (max - min +1) + min);
+}
