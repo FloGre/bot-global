@@ -9,7 +9,7 @@ bot.on('ready', ()=>{
     console.log("Connecté");
 });
 
-bot.login(process.env.TOKEN);
+bot.login(NTY1NTY0NTUzMjA3ODczNTM2.XK4RCQ.g0jFTxLQBSKMXKrsiMurPTJoZ38);
 
 bot.on(`message`, message => {
     if (message.content === prefix + "help"){
@@ -24,7 +24,7 @@ bot.on(`message`, message => {
     if (message.content === "Salut"){
         random();
         if(rendnum == 1){
-            message.reply("Salut à toi jeune pandawan");
+            message.reply("Cher dame auriez vous l'obligeance de me montrer votre culotte. Si t'es un mec casse toi !");
             console.log(randnum);
         }
         if(randnum == 2){
